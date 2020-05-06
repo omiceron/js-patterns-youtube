@@ -5,6 +5,8 @@ JavaScript Patterns Demo
 ### Constructor
 
 ```js
+
+
 class Server {
   constructor(name, ip) {
     this.name = name
@@ -12,7 +14,8 @@ class Server {
   }
 
   getUrl() {
-    return `https:  }
+    return `https://${this.ip}:80`
+  }
 }
 
 const aws = new Server('AWS German', '82.21.21.32')
@@ -180,7 +183,8 @@ class Server {
   }
 
   get url() {
-    return `https:  }
+    return `https://${this.ip}:${this.port}`
+  }
 }
 
 function aws(server) {
@@ -416,6 +420,7 @@ function* generator(collection) {
 
 const iterator = new MyIterator(['This', 'is', 'iterator'])
 const gen = generator(['This', 'is', 'iterator'])
+
 
 console.log(gen.next().value)
 console.log(gen.next().value)
