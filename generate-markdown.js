@@ -8,7 +8,9 @@ const h1 = '# js-patterns-youtube\nJavaScript Patterns Demo\n\n';
 const removeComments = (data) => data.replace(/\/\*[\s\S]*?\*\/|([^:]|^)\/\/.*$/gm, '');
 const formatToCodeMD = (data) => `\`\`\`js\n${data}\`\`\``;
 const getH2 = (path) => `## ${path.replace(/\d+\s+/, '').toUpperCase()}\n`;
-const getH3 = (path) => `### ${path.replace(/\d+_(\w)(\w+)\.js/i, (_, p1, p2) => p1.toUpperCase() + p2)}\n\n`;
+const getH3 = (path) => `### ${path.replace(/\d+_(\w)(\w+)\.js/i, (_, p1, p2) => {
+  return p1.toUpperCase() + p2.replace(/_/g, ' ');
+})}\n\n`;
 
 result += h1;
 

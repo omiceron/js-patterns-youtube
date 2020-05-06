@@ -323,7 +323,7 @@ console.log(proxiedFetch('react.io'))
 console.log(proxiedFetch('angular.io'))
 ```
 ## BEHAVIOUR
-### Chain_of_responsibility
+### Chain of responsibility
 
 ```js
 class MySum {
